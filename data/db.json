@@ -1,0 +1,84 @@
+{
+    "adInfo" : [
+        {
+            "ad_id": "AD_001",
+            "category": ["GROCERY", "DELEVERY"],
+            "announcementDay": "2022-04-01",
+            "startTime":"12:00",
+            "endTime":"18:00",
+            "limit":10
+        },
+        {
+            "ad_id": "AD_002",
+            "category": ["GROCERY", "DELEVERY"],
+            "announcementDay": "2022-04-01",
+            "startTime":"12:00",
+            "endTime":"18:00",
+            "limit":10
+        },
+        {
+            "ad_id": "AD_003",
+            "category": ["GROCERY", "DELEVERY"],
+            "announcementDay": "2022-04-01",
+            "startTime":"12:00",
+            "endTime":"18:00",
+            "limit":10
+        },
+        {
+            "ad_id": "AD_004",
+            "category": ["GROCERY", "DELEVERY"],
+            "announcementDay": "2022-04-01",
+            "startTime":"12:00",
+            "endTime":"18:00",
+            "limit":10
+        },
+        {
+            "ad_id": "AD_005",
+            "category": ["GROCERY", "DELEVERY"],
+            "announcementDay": "2022-04-01",
+            "startTime":"12:00",
+            "endTime":"18:00",
+            "limit":10
+        },
+        {
+            "ad_id": "AD_006",
+            "category": ["GROCERY", "DELEVERY"],
+            "announcementDay": "2022-04-01",
+            "startTime":"12:00",
+            "endTime":"18:00",
+            "limit":10
+        },
+        {
+            "ad_id": "AD_007",
+            "category": ["GROCERY", "DELEVERY"],
+            "announcementDay": "2022-04-01",
+            "startTime":"12:00",
+            "endTime":"18:00",
+            "limit":10
+        },
+        {
+            "ad_id": "AD_008",
+            "category": ["GROCERY", "DELEVERY"],
+            "announcementDay": "2022-04-01",
+            "startTime":"12:00",
+            "endTime":"18:00",
+            "limit":10
+        },
+        {
+            "ad_id": "AD_009",
+            "category": ["GROCERY", "DELEVERY"],
+            "announcementDay": "2022-04-01",
+            "startTime":"12:00",
+            "endTime":"18:00",
+            "limit":10
+        },
+        {
+            "ad_id": "AD_010",
+            "category": ["GROCERY", "DELEVERY"],
+            "announcementDay": "2022-04-01",
+            "startTime":"12:00",
+            "endTime":"18:00",
+            "limit":10
+        }
+    ]
+}
