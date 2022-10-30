@@ -17,7 +17,11 @@ const AdBoard = () => {
         ></Img>
       </ImgWrapper>
       <CodeWrapper>
-        <QRCode value="qr_info" onClick={() => navigateUserInfo('/userInfo')} />
+        <QRCode
+          value="qr_code"
+          size={100}
+          onClick={() => navigateUserInfo('/userInfo')}
+        />
       </CodeWrapper>
     </Container>
   );
@@ -25,9 +29,7 @@ const AdBoard = () => {
 
 export default AdBoard;
 
-const Container = styled.div`
-  height: 100vh;
-`;
+const Container = styled.div``;
 const TitleWrpper = styled.div`
   height: 10vh;
   display: flex;
@@ -44,7 +46,9 @@ const Img = styled.img`
 `;
 const CodeWrapper = styled.div`
   z-index: 10;
-  position: sticky;
-  left: 0;
-  font-size: 50px;
+  position: absolute;
+  bottom: 0px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
 `;
