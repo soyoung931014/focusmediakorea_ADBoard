@@ -1,7 +1,10 @@
 import React from 'react';
+import QRCode from 'react-qr-code';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const AdBoard = () => {
+  const navigateUserInfo = useNavigate();
   return (
     <Container>
       <TitleWrpper>
@@ -14,7 +17,7 @@ const AdBoard = () => {
         ></Img>
       </ImgWrapper>
       <CodeWrapper>
-        <div>qr코드</div>
+        <QRCode value="qr_info" onClick={() => navigateUserInfo('/userInfo')} />
       </CodeWrapper>
     </Container>
   );
@@ -36,14 +39,12 @@ const Title = styled.div`
 `;
 const ImgWrapper = styled.div``;
 const Img = styled.img`
-  width: 44.9rem;
+  width: ${({ theme }) => theme.deviceSizes.minSize};
   height: 90vh;
-  border: solid red 2px;
 `;
 const CodeWrapper = styled.div`
   z-index: 10;
   position: sticky;
-
   left: 0;
   font-size: 50px;
 `;
