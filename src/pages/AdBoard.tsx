@@ -1,10 +1,34 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect } from 'react';
 import QRCode from 'react-qr-code';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { format, getHours, getTime } from 'date-fns';
+import { useQuery } from 'react-query';
+import { fetchAd } from '../api/adApi';
 
 const AdBoard = () => {
   const navigateUserInfo = useNavigate();
+  // 오늘 날짜 찾음
+  const today: string = format(new Date(), 'yyyy-MM-dd');
+  console.log(today);
+  // 오늘 시간 찾자
+  let currentTime: string | number = getHours(new Date());
+
+  if (0 <= currentTime && currentTime < 6) {
+    currentTime = '00';
+  } else if (6 <= currentTime && currentTime < 12) {
+    currentTime = '06';
+  } else if (12 <= currentTime && currentTime < 18) {
+    currentTime = '12';
+  } else {
+    currentTime = '18';
+  }
+
+  const info = useQuery(['adList', today, currentTime], () =>
+    fetchAd(today, currentTime),
+  );
+
   return (
     <Container>
       <TitleWrpper>

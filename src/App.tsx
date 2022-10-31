@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import Router from './routes/Router';
 import GlobalStyle from './styles/GlobalStyle';
 import theme from './styles/theme';
+import { ReactQueryDevtools } from 'react-query/devtools';
 const queryClient = new QueryClient();
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Router />
         </ThemeProvider>
       </BrowserRouter>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
