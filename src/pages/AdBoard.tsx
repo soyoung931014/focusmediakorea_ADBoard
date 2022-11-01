@@ -1,20 +1,30 @@
-import axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import QRCode from 'react-qr-code';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { format, getHours, getTime } from 'date-fns';
+import { format, getHours } from 'date-fns';
 import { useQuery } from 'react-query';
 import { fetchAd } from '../api/adApi';
+import useInterval from '../hooks/useInterval';
+import { adInfo } from '../types/type';
+
+export interface info {
+  data: adInfo[];
+  isLoading: boolean;
+}
 
 const AdBoard = () => {
   const navigateUserInfo = useNavigate();
-  // 오늘 날짜 찾음
-  const today: string = format(new Date(), 'yyyy-MM-dd');
-  console.log(today);
-  // 오늘 시간 찾자
-  let currentTime: string | number = getHours(new Date());
+  const [status, setStatus] = useState(false);
+  const [dataIndex, setDataIndex] = useState(0);
 
+  useEffect(() => {
+    setStatus(!status);
+  }, []);
+
+  const today: string = format(new Date(), 'yyyy-MM-dd');
+
+  let currentTime: string | number = getHours(new Date());
   if (0 <= currentTime && currentTime < 6) {
     currentTime = '00';
   } else if (6 <= currentTime && currentTime < 12) {
@@ -29,25 +39,47 @@ const AdBoard = () => {
     fetchAd(today, currentTime),
   );
 
+  const { isLoading, data } = info;
+
+  useInterval(
+    () => {
+      setDataIndex(prev => prev + 1);
+    },
+    status ? 1000 : null,
+  );
+  if (data) {
+    if (dataIndex === data.length) {
+      setStatus(false);
+      setDataIndex(0);
+    }
+  }
+
   return (
-    <Container>
-      <TitleWrpper>
-        <Title>title작성합니다.</Title>
-      </TitleWrpper>
-      <ImgWrapper>
-        <Img
-          alt="mockAdImg"
-          src={`${process.env.PUBLIC_URL}/images/ad_image.png`}
-        ></Img>
-      </ImgWrapper>
-      <CodeWrapper>
-        <QRCode
-          value="qr_code"
-          size={100}
-          onClick={() => navigateUserInfo('/userInfo')}
-        />
-      </CodeWrapper>
-    </Container>
+    <>
+      {!isLoading ? (
+        <Container>
+          <TitleWrpper>
+            <Title>{data[dataIndex]?.ad_id}</Title>
+            <div>{data[dataIndex]?.category}</div>
+          </TitleWrpper>
+          <ImgWrapper>
+            <Img
+              alt="mockAdImg"
+              src={`${process.env.PUBLIC_URL}/images/ad_image.png`}
+            ></Img>
+          </ImgWrapper>
+          <CodeWrapper>
+            <QRCode
+              value="qr_code"
+              size={100}
+              onClick={() => navigateUserInfo('/userInfo')}
+            />
+          </CodeWrapper>
+        </Container>
+      ) : (
+        <h1>isLoading</h1>
+      )}
+    </>
   );
 };
 
