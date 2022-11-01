@@ -1,22 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import QRCode from 'react-qr-code';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+
+import QRCode from 'react-qr-code';
 import { format, getHours } from 'date-fns';
+import useInterval from '../hooks/useInterval';
+
 import { useQuery } from 'react-query';
 import { fetchAd } from '../api/adApi';
-import useInterval from '../hooks/useInterval';
-import { adInfo } from '../types/type';
-
-export interface info {
-  data: adInfo[];
-  isLoading: boolean;
-}
 
 const AdBoard = () => {
   const navigateUserInfo = useNavigate();
-  const [status, setStatus] = useState(false);
-  const [dataIndex, setDataIndex] = useState(0);
+  const [status, setStatus] = useState<boolean>(false);
+  const [dataIndex, setDataIndex] = useState<number>(0);
 
   useEffect(() => {
     setStatus(!status);
