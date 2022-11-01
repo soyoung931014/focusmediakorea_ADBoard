@@ -11,7 +11,7 @@
         {
             "ad_id": "AD_002",
             "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-04-01",
+            "announcementDay": "2022-10-31",
             "startTime":"12:00",
             "endTime":"18:00",
             "limit":10
@@ -19,18 +19,18 @@
         {
             "ad_id": "AD_003",
             "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-04-01",
-            "startTime":"12:00",
-            "endTime":"18:00",
+            "announcementDay": "2022-10-31",
+            "startTime":"00:00",
+            "endTime":"06:00",
             "limit":10
         },
         {
             "ad_id": "AD_004",
             "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-04-01",
+            "announcementDay": "2022-10-31",
             "startTime":"12:00",
             "endTime":"18:00",
-            "limit":10
+            "limit":5
         },
         {
             "ad_id": "AD_005",
