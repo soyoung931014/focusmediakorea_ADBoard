@@ -1,7 +1,8 @@
-import axios from 'axios';
-import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { userInfoMutation } from '../api/adApi';
+
 import { userInfo } from '../types/type';
 
 interface RouteState {
@@ -13,8 +14,9 @@ const InfoRegister = () => {
   const { adId } = useParams();
   const { state } = useLocation() as RouteState;
   const navigate = useNavigate();
+  const { mutate } = userInfoMutation();
+
   const emailInput = useRef<HTMLInputElement | null>(null);
-  console.log(emailInput, 'emailINptu');
   const nameInput = useRef<HTMLInputElement | null>(null);
 
   setTimeout(() => {
@@ -22,7 +24,7 @@ const InfoRegister = () => {
   }, 50000);
 
   const [info, setInfo] = useState<userInfo>({
-    elevator_id: 'EEL',
+    elevator_id: 'ELE_3041',
     ad_id: adId || '',
     scanTime: state?.scanTime,
     name: '',
@@ -36,8 +38,6 @@ const InfoRegister = () => {
   };
   const emailRegExp =
     /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}$/;
-
-  console.log(info);
 
   const emailHandleInfo = (e: React.ChangeEvent<HTMLInputElement>) => {
     handleInfo(e);
@@ -54,9 +54,12 @@ const InfoRegister = () => {
       emailInput.current?.focus();
     }
     if (info.license.length < 1) {
-      alert('동의 약관을 선택해주세요');
+      alert('약관 동의 여부를 선택해주세요');
     }
-    console.log('send');
+    mutate(info);
+    console.log(info);
+    alert('전송 완료, db.json에서 확인할 수 있습니다.');
+    navigate('/');
   };
 
   return (
@@ -87,7 +90,7 @@ const InfoRegister = () => {
               <Message>{emailvalidation}</Message>
             </EmailWrapper>
             <AgreementWrapper>
-              <Title>동의 약관</Title>
+              <Title>약관 동의</Title>
               <Option>
                 <input
                   style={{ marginRight: '5px' }}
