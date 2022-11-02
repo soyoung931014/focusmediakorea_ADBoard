@@ -49,12 +49,15 @@ const InfoRegister = () => {
     e.preventDefault();
     if (info.name.length < 1) {
       nameInput.current?.focus();
+      return;
     }
     if (info.email.length < 1) {
       emailInput.current?.focus();
+      return;
     }
-    if (info.license.length < 1) {
-      alert('약관 동의 여부를 선택해주세요');
+    if (info.license.length < 1 || info.license === 'N') {
+      alert('약관 동의 여부를 확인해주세요');
+      return;
     }
     mutate(info);
     console.log(info);
