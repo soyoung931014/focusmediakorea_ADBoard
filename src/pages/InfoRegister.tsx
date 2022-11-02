@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import axios from 'axios';
+import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { userInfo } from '../types/type';
 
+interface RouteState {
+  state: {
+    scanTime: string;
+  };
+}
 const InfoRegister = () => {
   const { adId } = useParams();
-  const { state } = useLocation();
+  const { state } = useLocation() as RouteState;
+  const navigate = useNavigate();
+  const emailInput = useRef<HTMLInputElement | null>(null);
+  console.log(emailInput, 'emailINptu');
+  const nameInput = useRef<HTMLInputElement | null>(null);
+
+  setTimeout(() => {
+    navigate('/');
+  }, 50000);
 
   const [info, setInfo] = useState<userInfo>({
     elevator_id: 'EEL',
@@ -17,12 +31,12 @@ const InfoRegister = () => {
   });
   const [emailvalidation, setEmailValidation] = useState('');
 
-  const emailRegExp =
-    /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}$/;
-
   const handleInfo = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInfo({ ...info, [e.target.name]: e.target.value });
   };
+  const emailRegExp =
+    /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}$/;
+
   console.log(info);
 
   const emailHandleInfo = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,12 +45,25 @@ const InfoRegister = () => {
       setEmailValidation('올바른 이메일을 입력해주세요.');
     } else setEmailValidation('');
   };
+  const sendInfo = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (info.name.length < 1) {
+      nameInput.current?.focus();
+    }
+    if (info.email.length < 1) {
+      emailInput.current?.focus();
+    }
+    if (info.license.length < 1) {
+      alert('동의 약관을 선택해주세요');
+    }
+    console.log('send');
+  };
 
   return (
     <>
       {state?.scanTime ? (
         <Container>
-          <Wrapper>
+          <Wrapper onSubmit={sendInfo}>
             <NameWrapper>
               <Title>이름</Title>
               <Input
@@ -44,6 +71,7 @@ const InfoRegister = () => {
                 placeholder="name"
                 onChange={handleInfo}
                 name="name"
+                ref={nameInput}
               />
             </NameWrapper>
 
@@ -54,6 +82,7 @@ const InfoRegister = () => {
                 placeholder="email"
                 onChange={emailHandleInfo}
                 name="email"
+                ref={emailInput}
               />
               <Message>{emailvalidation}</Message>
             </EmailWrapper>
@@ -61,19 +90,23 @@ const InfoRegister = () => {
               <Title>동의 약관</Title>
               <Option>
                 <input
+                  style={{ marginRight: '5px' }}
                   type="radio"
                   id="YES"
-                  name="agreementStatus"
-                  value="true"
+                  name="license"
+                  value="Y"
+                  onChange={handleInfo}
                 />
                 <label htmlFor="YES">예</label>
               </Option>
               <Option>
                 <input
+                  style={{ marginRight: '5px' }}
                   type="radio"
                   id="NO"
-                  name="agreementStatus"
-                  value="false"
+                  name="license"
+                  value="N"
+                  onChange={handleInfo}
                 />
                 <label htmlFor="NO">아니오</label>
               </Option>
