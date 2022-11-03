@@ -1,5 +1,7 @@
 import { BASE_URL } from './index';
 import axios from 'axios';
+import { userInfo } from '../types/type';
+import { useMutation } from 'react-query';
 
 export const fetchAd = async (today: string, currentTime: string | number) => {
   try {
@@ -11,3 +13,8 @@ export const fetchAd = async (today: string, currentTime: string | number) => {
     return console.log(error);
   }
 };
+
+export const userInfoMutation = () =>
+  useMutation((info: userInfo) => {
+    return axios.post(`${BASE_URL}/userInfo`, info);
+  });
