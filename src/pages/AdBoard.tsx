@@ -24,7 +24,7 @@ const AdBoard = () => {
         setDataIndex(prev => prev + 1);
         if (dataIndex === allLimit) {
           setStatus(false);
-          setDataIndex(0);
+          setDataIndex(-1);
         }
       }
     },
@@ -59,7 +59,7 @@ const AdBoard = () => {
         <Container>
           <TitleWrpper>
             <Title>
-              {!data ? (
+              {!data || dataIndex === -1 ? (
                 <div>광고 없음</div>
               ) : (
                 data[dataIndex % data.length]?.ad_id
@@ -72,7 +72,7 @@ const AdBoard = () => {
               src={`${process.env.PUBLIC_URL}/images/ad_image.png`}
             ></Img>
           </ImgWrapper>
-          {!data ? null : (
+          {!data || dataIndex === -1 ? null : (
             <CodeWrapper>
               <Link
                 to={`/infoRegister/${data[dataIndex % data.length]?.ad_id}`}
