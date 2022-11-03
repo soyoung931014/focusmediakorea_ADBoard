@@ -67,10 +67,19 @@ const AdBoard = () => {
             </Title>
           </TitleWrpper>
           <ImgWrapper>
-            <Img
-              alt="mockAdImg"
-              src={`${process.env.PUBLIC_URL}/images/ad_image.png`}
-            ></Img>
+            {!data || dataIndex === -1 ? (
+              <Img
+                alt="mockAdImg"
+                src={`${process.env.PUBLIC_URL}/images/focusmedia.png`}
+              ></Img>
+            ) : (
+              <Img
+                alt="mockAdImg"
+                src={`${process.env.PUBLIC_URL}/images/${
+                  data[dataIndex % data.length]?.ad
+                }`}
+              ></Img>
+            )}
           </ImgWrapper>
           {!data || dataIndex === -1 ? null : (
             <CodeWrapper>
@@ -84,7 +93,7 @@ const AdBoard = () => {
           )}
         </Container>
       ) : (
-        <h1>isLoading</h1>
+        <h1>Loading...</h1>
       )}
     </>
   );
