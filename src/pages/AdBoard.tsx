@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import QRCode from 'react-qr-code';
 import { format, getHours } from 'date-fns';
@@ -8,15 +8,28 @@ import useInterval from '../hooks/useInterval';
 
 import { useQuery } from 'react-query';
 import { fetchAd } from '../api/adApi';
+import { adInfo } from '../types/type';
 
 const AdBoard = () => {
-  const navigateUserInfo = useNavigate();
   const [status, setStatus] = useState<boolean>(false);
   const [dataIndex, setDataIndex] = useState<number>(0);
 
   useEffect(() => {
     setStatus(!status);
   }, []);
+
+  useInterval(
+    () => {
+      if (data) {
+        setDataIndex(prev => prev + 1);
+        if (dataIndex === allLimit) {
+          setStatus(false);
+          setDataIndex(0);
+        }
+      }
+    },
+    status ? 1000 : null,
+  );
 
   const today: string = format(new Date(), 'yyyy-MM-dd');
 
@@ -31,32 +44,27 @@ const AdBoard = () => {
     currentTime = '18';
   }
 
-  const info = useQuery(['adList', today, currentTime], () =>
-    fetchAd(today, currentTime),
+  const { isLoading, data } = useQuery<adInfo[]>(
+    ['adList', today, currentTime],
+    () => fetchAd(today, currentTime),
   );
 
-  const { isLoading, data } = info;
+  const allLimit = data?.reduce((acc: number, cur: any) => acc + cur.limit, 0);
 
-  useInterval(
-    () => {
-      setDataIndex(prev => prev + 1);
-    },
-    status ? 1000 : null,
-  );
-  if (data) {
-    if (dataIndex === data.length) {
-      setStatus(false);
-      setDataIndex(0);
-    }
-  }
+  const scanTime = new Date();
 
   return (
     <>
       {!isLoading ? (
         <Container>
           <TitleWrpper>
-            <Title>{data[dataIndex]?.ad_id}</Title>
-            <div>{data[dataIndex]?.category}</div>
+            <Title>
+              {!data ? (
+                <div>광고 없음</div>
+              ) : (
+                data[dataIndex % data.length]?.ad_id
+              )}
+            </Title>
           </TitleWrpper>
           <ImgWrapper>
             <Img
@@ -64,13 +72,16 @@ const AdBoard = () => {
               src={`${process.env.PUBLIC_URL}/images/ad_image.png`}
             ></Img>
           </ImgWrapper>
-          <CodeWrapper>
-            <QRCode
-              value="qr_code"
-              size={100}
-              onClick={() => navigateUserInfo('/userInfo')}
-            />
-          </CodeWrapper>
+          {!data ? null : (
+            <CodeWrapper>
+              <Link
+                to={`/infoRegister/${data[dataIndex % data.length]?.ad_id}`}
+                state={{ scanTime: scanTime.toISOString() }}
+              >
+                <QRCode value="qr_code" size={100} />
+              </Link>
+            </CodeWrapper>
+          )}
         </Container>
       ) : (
         <h1>isLoading</h1>
