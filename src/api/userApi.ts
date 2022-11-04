@@ -3,7 +3,7 @@ import axios from 'axios';
 import { userInfo } from '../types/type';
 import { useMutation } from 'react-query';
 
-export const userInfoMutation = () =>
+export const addUserInfoMutation = () =>
   useMutation(async (info: userInfo) => {
     try {
       return await axios.post(`${BASE_URL}/userInfo`, info);
@@ -20,7 +20,7 @@ export const findUser = async (ad_id: string, email: string) => {
     if (response.data.length !== 0) {
       return { message: 'already exist', statusCode: 400 };
     } else {
-      return { message: 'ok', statusCode: 200 };
+      return { message: 'available', statusCode: 200 };
     }
   } catch (error) {
     console.log('error');

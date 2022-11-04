@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { findUser, userInfoMutation } from '../api/adApi';
+import { findUser, addUserInfoMutation } from '../api/userApi';
 
 import { userInfo } from '../types/type';
 
@@ -14,7 +14,7 @@ const InfoRegister = () => {
   const { adId } = useParams();
   const { state } = useLocation() as RouteState;
 
-  const { mutate } = userInfoMutation();
+  const { mutate } = addUserInfoMutation();
 
   const emailInput = useRef<HTMLInputElement | null>(null);
   const nameInput = useRef<HTMLInputElement | null>(null);
