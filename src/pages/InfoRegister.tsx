@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { userInfoMutation } from '../api/adApi';
+import { findUser, userInfoMutation } from '../api/adApi';
 
 import { userInfo } from '../types/type';
 
@@ -14,6 +14,7 @@ const InfoRegister = () => {
   const { adId } = useParams();
   const { state } = useLocation() as RouteState;
   const navigate = useNavigate();
+
   const { mutate } = userInfoMutation();
 
   const emailInput = useRef<HTMLInputElement | null>(null);
@@ -59,10 +60,17 @@ const InfoRegister = () => {
       alert('약관 동의 여부를 확인해주세요');
       return;
     }
-    mutate(info);
-    console.log(info);
-    alert('전송 완료, db.json에서 확인할 수 있습니다.');
-    navigate('/');
+
+    findUser(info.ad_id, info.email).then(response => {
+      if (response?.statusCode === 200) {
+        mutate(info);
+        alert('전송 완료, db.json에서 확인할 수 있습니다.');
+        navigate('/');
+        return;
+      } else {
+        alert('해당 광고에 이미 등록된 이메일입니다.');
+      }
+    });
   };
 
   return (
