@@ -52,7 +52,7 @@ const AdBoard = () => {
 
   const allLimit = data?.reduce((acc: number, cur: any) => acc + cur.limit, 0);
 
-  const index = data ? dataIndex % data.length : dataIndex;
+  const index = data && dataIndex !== -1 ? dataIndex % data.length : dataIndex;
 
   return (
     <Container>
