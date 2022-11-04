@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-import QRCode from 'react-qr-code';
-import { format, getHours } from 'date-fns';
+import Advertisement from '../components/Advertisement';
+import QrCode from '../components/QrCode';
 import useInterval from '../hooks/useInterval';
+import { format, getHours } from 'date-fns';
 
 import { useQuery } from 'react-query';
 import { fetchAd } from '../api/adApi';
+
 import { adInfo } from '../types/type';
 
 const AdBoard = () => {
@@ -31,7 +32,7 @@ const AdBoard = () => {
     status ? 1000 : null,
   );
 
-  const today: string = format(new Date(), 'yyyy-MM-dd');
+  const today = format(new Date(), 'yyyy-MM-dd');
 
   let currentTime: string | number = getHours(new Date());
   if (0 <= currentTime && currentTime < 6) {
@@ -51,76 +52,24 @@ const AdBoard = () => {
 
   const allLimit = data?.reduce((acc: number, cur: any) => acc + cur.limit, 0);
 
-  const scanTime = new Date();
+  const index = data ? dataIndex % data.length : dataIndex;
 
   return (
-    <>
+    <Container>
       {!isLoading ? (
-        <Container>
-          <TitleWrpper>
-            <Title>
-              {!data || dataIndex === -1 ? (
-                <div>광고 없음</div>
-              ) : (
-                data[dataIndex % data.length]?.ad_id
-              )}
-            </Title>
-          </TitleWrpper>
-          <ImgWrapper>
-            {!data || dataIndex === -1 ? (
-              <Img
-                alt="mockAdImg"
-                src={`${process.env.PUBLIC_URL}/images/focusmedia.png`}
-              ></Img>
-            ) : (
-              <Img
-                alt="mockAdImg"
-                src={`${process.env.PUBLIC_URL}/images/${
-                  data[dataIndex % data.length]?.ad
-                }`}
-              ></Img>
-            )}
-          </ImgWrapper>
-          {!data || dataIndex === -1 ? null : (
-            <CodeWrapper>
-              <Link
-                to={`/infoRegister/${data[dataIndex % data.length]?.ad_id}`}
-                state={{ scanTime: scanTime.toISOString() }}
-              >
-                <QRCode value="qr_code" size={100} />
-              </Link>
-            </CodeWrapper>
-          )}
-        </Container>
+        <>
+          <Advertisement data={data} index={index} />
+          <QrCode data={data} index={index} />
+        </>
       ) : (
-        <h1>Loading...</h1>
+        <>
+          <h1>Loading...</h1>
+        </>
       )}
-    </>
+    </Container>
   );
 };
 
 export default AdBoard;
 
 const Container = styled.div``;
-const TitleWrpper = styled.div`
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-const Title = styled.div`
-  font-size: 20px;
-`;
-const ImgWrapper = styled.div``;
-const Img = styled.img`
-  width: ${({ theme }) => theme.deviceSizes.minSize};
-  height: 90vh;
-`;
-const CodeWrapper = styled.div`
-  z-index: 10;
-  position: absolute;
-  bottom: 0px;
-  margin-left: 15px;
-  margin-bottom: 10px;
-  cursor: pointer;
-`;
