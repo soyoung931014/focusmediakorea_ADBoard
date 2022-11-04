@@ -1,84 +1,103 @@
 {
-    "adInfo" : [
-        {
-            "ad_id": "AD_001",
-            "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-04-01",
-            "startTime":"12:00",
-            "endTime":"18:00",
-            "limit":10
-        },
-        {
-            "ad_id": "AD_002",
-            "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-10-31",
-            "startTime":"12:00",
-            "endTime":"18:00",
-            "limit":10
-        },
-        {
-            "ad_id": "AD_003",
-            "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-10-31",
-            "startTime":"00:00",
-            "endTime":"06:00",
-            "limit":10
-        },
-        {
-            "ad_id": "AD_004",
-            "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-10-31",
-            "startTime":"12:00",
-            "endTime":"18:00",
-            "limit":5
-        },
-        {
-            "ad_id": "AD_005",
-            "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-04-01",
-            "startTime":"12:00",
-            "endTime":"18:00",
-            "limit":10
-        },
-        {
-            "ad_id": "AD_006",
-            "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-04-01",
-            "startTime":"12:00",
-            "endTime":"18:00",
-            "limit":10
-        },
-        {
-            "ad_id": "AD_007",
-            "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-04-01",
-            "startTime":"12:00",
-            "endTime":"18:00",
-            "limit":10
-        },
-        {
-            "ad_id": "AD_008",
-            "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-04-01",
-            "startTime":"12:00",
-            "endTime":"18:00",
-            "limit":10
-        },
-        {
-            "ad_id": "AD_009",
-            "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-04-01",
-            "startTime":"12:00",
-            "endTime":"18:00",
-            "limit":10
-        },
-        {
-            "ad_id": "AD_010",
-            "category": ["GROCERY", "DELEVERY"],
-            "announcementDay": "2022-04-01",
-            "startTime":"12:00",
-            "endTime":"18:00",
-            "limit":10
-        }
+    "adInfo": [
+      {
+        "ad_id": "AD_001",
+        "category": [
+          "GROCERY",
+          "DELEVERY"
+        ],
+        "announcementDay": "2022-11-03",
+        "startTime": "18:00",
+        "endTime": "24:00",
+        "limit": 10,
+        "ad": "marketKurly.png"
+      },
+      {
+        "ad_id": "AD_002",
+        "category": [
+          "GROCERY",
+          "DELEVERY"
+        ],
+        "announcementDay": "2022-11-03",
+        "startTime": "18:00",
+        "endTime": "24:00",
+        "limit": 10,
+        "ad": "fomibox.png"
+      },
+      {
+        "ad_id": "AD_003",
+        "category": [
+          "GROCERY",
+          "DELEVERY"
+        ],
+        "announcementDay": "2022-11-03",
+        "startTime": "18:00",
+        "endTime": "24:00",
+        "limit": 10,
+        "ad": "nike.png"
+      },
+      {
+        "ad_id": "AD_004",
+        "category": [
+          "GROCERY",
+          "DELEVERY"
+        ],
+        "announcementDay": "2022-11-03",
+        "startTime": "18:00",
+        "endTime": "24:00",
+        "limit": 5,
+        "ad": "musinsa.png"
+      },
+      {
+        "ad_id": "AD_005",
+        "category": [
+          "GROCERY",
+          "DELEVERY"
+        ],
+        "announcementDay": "2022-11-03",
+        "startTime": "18:00",
+        "endTime": "24:00",
+        "limit": 10,
+        "ad": "bhc.png"
+      }
+      
+    ],
+    "userInfo": [
+      {
+        "elevator_id": "EEL",
+        "ad_id": "AD_010",
+        "scanTime": "2022-11-02T05:53:43.754Z",
+        "name": "박소영",
+        "email": "soyoung@gmail.com",
+        "license": "Y",
+        "id": 1
+      },
+      {
+        "elevator_id": "ELE_3041",
+        "ad_id": "AD_010",
+        "scanTime": "2022-11-02T05:58:09.155Z",
+        "name": "홍길동",
+        "email": "abc@gmail.com",
+        "license": "Y",
+        "id": 2
+      },
+      {
+        "elevator_id": "ELE_3041",
+        "ad_id": "AD_010",
+        "scanTime": "2022-11-02T06:02:01.901Z",
+        "name": "ddd",
+        "email": "",
+        "license": "",
+        "id": 3
+      },
+      {
+        "elevator_id": "ELE_3041",
+        "ad_id": "AD_010",
+        "scanTime": "2022-11-02T06:02:12.107Z",
+        "name": "s",
+        "email": "soyoung123@gmail.com",
+        "license": "Y",
+        "id": 4
+      }
     ]
-}
+  }

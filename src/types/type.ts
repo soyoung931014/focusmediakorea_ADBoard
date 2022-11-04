@@ -5,6 +5,7 @@ export interface adInfo {
   startTime: string;
   endTime: string;
   limit: number;
+  ad: string;
 }
 
 export interface userInfo {
