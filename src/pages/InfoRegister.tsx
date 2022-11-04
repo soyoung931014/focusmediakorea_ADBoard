@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { userInfoMutation } from '../api/adApi';
+import { findUser, userInfoMutation } from '../api/adApi';
 
 import { userInfo } from '../types/type';
 
@@ -13,15 +13,17 @@ interface RouteState {
 const InfoRegister = () => {
   const { adId } = useParams();
   const { state } = useLocation() as RouteState;
-  const navigate = useNavigate();
+
   const { mutate } = userInfoMutation();
 
   const emailInput = useRef<HTMLInputElement | null>(null);
   const nameInput = useRef<HTMLInputElement | null>(null);
 
-  setTimeout(() => {
-    navigate('/');
-  }, 50000);
+  useEffect(() => {
+    setTimeout(() => {
+      location.replace('/');
+    }, 300000);
+  }, []);
 
   const [info, setInfo] = useState<userInfo>({
     elevator_id: 'ELE_3041',
@@ -45,6 +47,7 @@ const InfoRegister = () => {
       setEmailValidation('올바른 이메일을 입력해주세요.');
     } else setEmailValidation('');
   };
+
   const sendInfo = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (info.name.length < 1) {
@@ -59,73 +62,78 @@ const InfoRegister = () => {
       alert('약관 동의 여부를 확인해주세요');
       return;
     }
-    mutate(info);
-    console.log(info);
-    alert('전송 완료, db.json에서 확인할 수 있습니다.');
-    navigate('/');
+
+    findUser(info.ad_id, info.email).then(response => {
+      if (response?.statusCode === 200) {
+        mutate(info);
+        alert('전송 완료, db.json에서 확인할 수 있습니다.');
+        location.replace('/');
+      } else if (response?.statusCode === 400) {
+        alert('해당 광고에 이미 등록된 이메일입니다.');
+      }
+    });
   };
 
   return (
-    <>
+    <Container>
       {state?.scanTime ? (
-        <Container>
-          <Wrapper onSubmit={sendInfo}>
-            <NameWrapper>
-              <Title>이름</Title>
-              <Input
-                type="text"
-                placeholder="name"
+        <Wrapper onSubmit={sendInfo}>
+          <NameWrapper>
+            <Title>이름</Title>
+            <Input
+              type="text"
+              placeholder="name"
+              onChange={handleInfo}
+              name="name"
+              ref={nameInput}
+            />
+          </NameWrapper>
+          <EmailWrapper>
+            <Title>email</Title>
+            <Input
+              type="text"
+              placeholder="email"
+              onChange={emailHandleInfo}
+              name="email"
+              ref={emailInput}
+            />
+            <Message>{emailvalidation}</Message>
+          </EmailWrapper>
+          <AgreementWrapper>
+            <Title>약관 동의</Title>
+            <Option>
+              <input
+                style={{ marginRight: '5px' }}
+                type="radio"
+                id="YES"
+                name="license"
+                value="Y"
                 onChange={handleInfo}
-                name="name"
-                ref={nameInput}
               />
-            </NameWrapper>
-
-            <EmailWrapper>
-              <Title>email</Title>
-              <Input
-                type="text"
-                placeholder="email"
-                onChange={emailHandleInfo}
-                name="email"
-                ref={emailInput}
+              <label htmlFor="YES">예</label>
+            </Option>
+            <Option>
+              <input
+                style={{ marginRight: '5px' }}
+                type="radio"
+                id="NO"
+                name="license"
+                value="N"
+                onChange={handleInfo}
               />
-              <Message>{emailvalidation}</Message>
-            </EmailWrapper>
-            <AgreementWrapper>
-              <Title>약관 동의</Title>
-              <Option>
-                <input
-                  style={{ marginRight: '5px' }}
-                  type="radio"
-                  id="YES"
-                  name="license"
-                  value="Y"
-                  onChange={handleInfo}
-                />
-                <label htmlFor="YES">예</label>
-              </Option>
-              <Option>
-                <input
-                  style={{ marginRight: '5px' }}
-                  type="radio"
-                  id="NO"
-                  name="license"
-                  value="N"
-                  onChange={handleInfo}
-                />
-                <label htmlFor="NO">아니오</label>
-              </Option>
-            </AgreementWrapper>
-            <SendWrapper>
-              <button>보내기</button>
-            </SendWrapper>
-          </Wrapper>
-        </Container>
+              <label htmlFor="NO">아니오</label>
+            </Option>
+          </AgreementWrapper>
+          <SendWrapper>
+            <button>보내기</button>
+          </SendWrapper>
+        </Wrapper>
       ) : (
-        'loading'
+        <>
+          <h1>loading</h1>
+        </>
       )}
-    </>
+    </Container>
   );
 };
 

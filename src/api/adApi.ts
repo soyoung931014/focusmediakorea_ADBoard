@@ -18,6 +18,21 @@ export const fetchAd = async (today: string, currentTime: string | number) => {
 };
 
 export const userInfoMutation = () =>
-  useMutation((info: userInfo) => {
+  useMutation(async (info: userInfo) => {
     return axios.post(`${BASE_URL}/userInfo`, info);
   });
+
+export const findUser = async (ad_id: string, email: string) => {
+  try {
+    const response = await axios.get(
+      `${BASE_URL}/userInfo?ad_id=${ad_id}&email=${email}`,
+    );
+    if (response.data.length !== 0) {
+      return { message: 'already exist', statusCode: 400 };
+    } else {
+      return { message: 'ok', statusCode: 200 };
+    }
+  } catch (error) {
+    console.log('error');
+  }
+};
