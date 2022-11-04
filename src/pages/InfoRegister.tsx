@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { findUser, userInfoMutation } from '../api/adApi';
 
@@ -13,16 +13,17 @@ interface RouteState {
 const InfoRegister = () => {
   const { adId } = useParams();
   const { state } = useLocation() as RouteState;
-  const navigate = useNavigate();
 
   const { mutate } = userInfoMutation();
 
   const emailInput = useRef<HTMLInputElement | null>(null);
   const nameInput = useRef<HTMLInputElement | null>(null);
 
-  setTimeout(() => {
-    navigate('/');
-  }, 50000);
+  useEffect(() => {
+    setTimeout(() => {
+      location.replace('/');
+    }, 50000);
+  }, []);
 
   const [info, setInfo] = useState<userInfo>({
     elevator_id: 'ELE_3041',
@@ -46,6 +47,7 @@ const InfoRegister = () => {
       setEmailValidation('올바른 이메일을 입력해주세요.');
     } else setEmailValidation('');
   };
+
   const sendInfo = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (info.name.length < 1) {
@@ -65,9 +67,8 @@ const InfoRegister = () => {
       if (response?.statusCode === 200) {
         mutate(info);
         alert('전송 완료, db.json에서 확인할 수 있습니다.');
-        navigate('/');
-        return;
-      } else {
+        location.replace('/');
+      } else if (response?.statusCode === 400) {
         alert('해당 광고에 이미 등록된 이메일입니다.');
       }
     });
