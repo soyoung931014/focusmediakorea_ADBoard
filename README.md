@@ -63,6 +63,9 @@ $ yarn start
 react-query
 - 똑같은 광고를 limit까지 계속해서 페칭해야했기 때문에 react-query의 가장 큰 장점인 캐싱 기능을 이용해 서버와의 연동 횟수를 줄여야겠다고 생각했습니다. 
 
+useInterval
+- 처음 일정 시간마다 광고를 렌더링해야했기 때문에 setInterval()을 이용했습니다. 그러나 리렌더링시 무수한 타이머를 만드는 오류를 겪게 되었습니다. 오류를 해결하기 위해 useEffect에서 clearInterval()을 이용해 cleanup함수로 반환해 타이머를 제거해주었지만 무한 루프에 갖히는 문제를 마주하게 되었습니다. 이를 해결하기 위해 useRef를 이용한 커스텀 훅 useInterval을 사용했습니다. 
+
 최적화
  -  InfoRegister.tsx에서 useRef를 이용해 input태그의 onChange이벤트 실행 시, 발생하는 불필요한 렌더링을 줄였습니다.
  -  Router.tsx에서 React.lazy와 Suspense를 통해 code-splitting을 적용하였습니다. code-splitting적용은 개발자의 선택에 따라 그 위치를 결정할 수 있는데 사용자 경험에 가장 지장을 덜 받고 번들을 균등하게 분할할 수 있는 영역이라 생각되는 Router에서 진행했습니다.  
