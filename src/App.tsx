@@ -1,12 +1,14 @@
 import React from 'react';
-import { QueryClient, QueryClientProvider } from 'react-query';
 import { BrowserRouter } from 'react-router-dom';
+
 import { ThemeProvider } from 'styled-components';
-import Router from './routes/Router';
-import GlobalStyle from './styles/GlobalStyle';
 import theme from './styles/theme';
-import { ReactQueryDevtools } from 'react-query/devtools';
+import GlobalStyle from './styles/GlobalStyle';
+import Router from './routes/Router';
+
+import { QueryClient, QueryClientProvider } from 'react-query';
 const queryClient = new QueryClient();
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
@@ -16,7 +18,6 @@ function App() {
           <Router />
         </ThemeProvider>
       </BrowserRouter>
-      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
