@@ -55,17 +55,18 @@ const InfoRegister = () => {
     handleInfo(e, ref);
     if (emailRegExp.test(ref.current.value) === false) {
       setEmailValidation('올바른 이메일을 입력해주세요.');
-    } else setEmailValidation('');
+    } else {
+      setEmailValidation('');
+    }
   };
 
   const sendInfo = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(info, 'sendInfo');
     if (info.name.length < 1) {
       nameInput.current?.focus();
       return;
     }
-    if (info.email.length < 1) {
+    if (info.email.length < 1 || emailvalidation.length > 0) {
       emailInput.current?.focus();
       return;
     }
@@ -77,7 +78,8 @@ const InfoRegister = () => {
     findUser(info.ad_id, info.email).then(response => {
       if (response?.statusCode === 200) {
         mutate(info);
-        alert('전송 완료, db.json에서 확인할 수 있습니다.');
+        alert('전송 완료, db.json 혹은 콘솔에서 확인할 수 있습니다.');
+        console.log(info);
       } else if (response?.statusCode === 400) {
         alert('해당 광고에 이미 등록된 이메일입니다.');
       }
@@ -156,14 +158,13 @@ const InfoRegister = () => {
 export default InfoRegister;
 
 const Container = styled.div`
-  border: solid red 2px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 `;
 const Wrapper = styled.form`
-  border: solid red 2px;
+  border: solid gray 2px;
   height: 370px;
   padding: 33px;
 `;
