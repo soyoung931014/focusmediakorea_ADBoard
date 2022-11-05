@@ -10,6 +10,7 @@ interface RouteState {
     scanTime: string;
   };
 }
+
 const InfoRegister = () => {
   const { adId } = useParams();
   const { state } = useLocation() as RouteState;
@@ -18,6 +19,8 @@ const InfoRegister = () => {
 
   const emailInput = useRef<HTMLInputElement | null>(null);
   const nameInput = useRef<HTMLInputElement | null>(null);
+  const agreementInput = useRef<HTMLInputElement | null>(null);
+  const disAgreementInput = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -35,17 +38,26 @@ const InfoRegister = () => {
   });
   const [emailvalidation, setEmailValidation] = useState('');
 
-  const handleInfo = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInfo({ ...info, [e.target.name]: e.target.value });
+  const handleInfo = (e: React.ChangeEvent<HTMLInputElement>, ref: any) => {
+    ref.current.value = e.target.value;
   };
+  const clearBlur = (e: React.ChangeEvent<HTMLInputElement>, ref: any) => {
+    setInfo({ ...info, [e.target.name]: ref.current.value });
+  };
+
   const emailRegExp =
     /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}$/;
 
-  const emailHandleInfo = (e: React.ChangeEvent<HTMLInputElement>) => {
-    handleInfo(e);
-    if (emailRegExp.test(e.target.value) === false) {
+  const emailHandleInfo = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    ref: any,
+  ) => {
+    handleInfo(e, ref);
+    if (emailRegExp.test(ref.current.value) === false) {
       setEmailValidation('올바른 이메일을 입력해주세요.');
-    } else setEmailValidation('');
+    } else {
+      setEmailValidation('');
+    }
   };
 
   const sendInfo = (e: React.FormEvent<HTMLFormElement>) => {
@@ -54,7 +66,7 @@ const InfoRegister = () => {
       nameInput.current?.focus();
       return;
     }
-    if (info.email.length < 1) {
+    if (info.email.length < 1 || emailvalidation.length > 0) {
       emailInput.current?.focus();
       return;
     }
@@ -66,8 +78,11 @@ const InfoRegister = () => {
     findUser(info.ad_id, info.email).then(response => {
       if (response?.statusCode === 200) {
         mutate(info);
-        alert('전송 완료, db.json에서 확인할 수 있습니다.');
-        location.replace('/');
+        alert('전송 완료, db.json 혹은 콘솔에서 확인할 수 있습니다.');
+        console.log(info);
+        setTimeout(() => {
+          location.replace('/');
+        }, 5000);
       } else if (response?.statusCode === 400) {
         alert('해당 광고에 이미 등록된 이메일입니다.');
       }
@@ -83,9 +98,10 @@ const InfoRegister = () => {
             <Input
               type="text"
               placeholder="name"
-              onChange={handleInfo}
               name="name"
               ref={nameInput}
+              onChange={event => handleInfo(event, nameInput)}
+              onBlur={event => clearBlur(event, nameInput)}
             />
           </NameWrapper>
           <EmailWrapper>
@@ -93,9 +109,10 @@ const InfoRegister = () => {
             <Input
               type="text"
               placeholder="email"
-              onChange={emailHandleInfo}
               name="email"
               ref={emailInput}
+              onChange={event => emailHandleInfo(event, emailInput)}
+              onBlur={event => clearBlur(event, emailInput)}
             />
             <Message>{emailvalidation}</Message>
           </EmailWrapper>
@@ -108,7 +125,9 @@ const InfoRegister = () => {
                 id="YES"
                 name="license"
                 value="Y"
-                onChange={handleInfo}
+                ref={agreementInput}
+                onChange={event => handleInfo(event, agreementInput)}
+                onBlur={event => clearBlur(event, agreementInput)}
               />
               <label htmlFor="YES">예</label>
             </Option>
@@ -119,7 +138,9 @@ const InfoRegister = () => {
                 id="NO"
                 name="license"
                 value="N"
-                onChange={handleInfo}
+                ref={disAgreementInput}
+                onChange={event => handleInfo(event, disAgreementInput)}
+                onBlur={event => clearBlur(event, disAgreementInput)}
               />
               <label htmlFor="NO">아니오</label>
             </Option>
@@ -140,14 +161,13 @@ const InfoRegister = () => {
 export default InfoRegister;
 
 const Container = styled.div`
-  border: solid red 2px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 `;
 const Wrapper = styled.form`
-  border: solid red 2px;
+  border: solid gray 2px;
   height: 370px;
   padding: 33px;
 `;
