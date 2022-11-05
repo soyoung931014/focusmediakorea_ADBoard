@@ -80,6 +80,9 @@ const InfoRegister = () => {
         mutate(info);
         alert('전송 완료, db.json 혹은 콘솔에서 확인할 수 있습니다.');
         console.log(info);
+        setTimeout(() => {
+          location.replace('/');
+        }, 5000);
       } else if (response?.statusCode === 400) {
         alert('해당 광고에 이미 등록된 이메일입니다.');
       }
