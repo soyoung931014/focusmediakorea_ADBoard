@@ -1,2031 +1,232 @@
 {
-    "userInfo": [],
-    "adInfo": [
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-07",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-07",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-07",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-07",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
+  "userInfo": [
+    {
+      "elevator_id": "ELE_3041",
+      "ad_id": "AD_007",
+      "scanTime": "2023-02-20T07:42:48.335Z",
+      "name": "박소영",
+      "email": "soyoung123@gmail.com",
+      "license": "Y",
+      "id": 1
+    },
+    {
+      "elevator_id": "ELE_3041",
+      "ad_id": "AD_010",
+      "scanTime": "2023-02-20T07:47:10.033Z",
+      "name": "홍길동",
+      "email": "killdong@gmail.com",
+      "license": "Y",
+      "id": 2
+    }
+  ],
+  "adInfo": [
+    {
+      "ad_id": "AD_001",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2023-02-20",
+      "EndDay": "2023-11-07",
+      "startTime": "06:00",
+      "endTime": "12:00",
+      "limit": 10,
+      "ad": "marketKurly.png"
+    },
+    {
+      "ad_id": "AD_002",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
       "announcementDay": "2022-11-07",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-07",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-07",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-07",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-07",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
+      "EndDay": "2023-11-07",
+      "startTime": "06:00",
+      "endTime": "12:00",
+      "limit": 10,
+      "ad": "fomibox.png"
+    },
+    {
+      "ad_id": "AD_003",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
       "announcementDay": "2022-11-07",
+      "EndDay": "2023-11-05",
+      "startTime": "06:00",
+      "endTime": "12:00",
+      "limit": 10,
+      "ad": "nike.png"
+    },
+    {
+      "ad_id": "AD_004",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2022-11-07",
+      "EndDay": "2023-11-09",
+      "startTime": "06:00",
+      "endTime": "12:00",
+      "limit": 10,
+      "ad": "chief.png"
+    },
+    {
+      "ad_id": "AD_005",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2022-11-07",
+      "EndDay": "2023-12-07",
+      "startTime": "06:00",
+      "endTime": "12:00",
+      "limit": 10,
+      "ad": "bhc.png"
+    },
+    {
+      "ad_id": "AD_006",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2022-11-07",
+      "EndDay": "2022-12-07",
       "startTime": "12:00",
       "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-08",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-08",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-08",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-08",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-08",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-08",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-08",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-08",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-08",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-08",
+      "limit": 10,
+      "ad": "marketKurly.png"
+    },
+    {
+      "ad_id": "AD_007",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2022-11-07",
+      "EndDay": "2023-03-29",
       "startTime": "12:00",
       "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-09",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-09",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-09",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-09",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-09",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-09",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-09",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-09",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-09",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-09",
+      "limit": 10,
+      "ad": "fomibox.png"
+    },
+    {
+      "ad_id": "AD_008",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2022-11-07",
+      "EndDay": "2023-04-07",
       "startTime": "12:00",
       "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-10",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-10",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-10",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-10",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-10",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-10",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-10",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-10",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-10",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-10",
+      "limit": 10,
+      "ad": "nike.png"
+    },
+    {
+      "ad_id": "AD_009",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2023-02-20",
+      "EndDay": "2023-11-07",
       "startTime": "12:00",
       "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-11",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-11",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-11",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-11",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-11",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-11",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-11",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-11",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-11",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-11",
+      "limit": 10,
+      "ad": "chief.png"
+    },
+    {
+      "ad_id": "AD_010",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2023-02-20",
+      "EndDay": "2023-10-09",
       "startTime": "12:00",
       "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-12",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-12",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-12",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-12",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-12",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-12",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-12",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-12",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-12",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-12",
+      "limit": 10,
+      "ad": "bhc.png"
+    },
+    {
+      "ad_id": "AD_011",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2022-11-07",
+      "EndDay": "2022-12-07",
+      "startTime": "18:00",
+      "endTime": "24:00",
+      "limit": 10,
+      "ad": "marketKurly.png"
+    },
+    {
+      "ad_id": "AD_012",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2022-11-07",
+      "EndDay": "2023-03-29",
+      "startTime": "18:00",
+      "endTime": "24:00",
+      "limit": 10,
+      "ad": "fomibox.png"
+    },
+    {
+      "ad_id": "AD_013",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2022-11-07",
+      "EndDay": "2023-04-07",
+      "startTime": "18:00",
+      "endTime": "24:00",
+      "limit": 10,
+      "ad": "nike.png"
+    },
+    {
+      "ad_id": "AD_014",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2023-02-20",
+      "EndDay": "2023-11-07",
+      "startTime": "18:00",
+      "endTime": "24:00",
+      "limit": 10,
+      "ad": "chief.png"
+    },
+    {
+      "ad_id": "AD_015",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2023-02-20",
+      "EndDay": "2023-10-09",
+      "startTime": "18:00",
+      "endTime": "24:00",
+      "limit": 10,
+      "ad": "bhc.png"
+    },
+    {
+      "ad_id": "AD_016",
+      "category": [
+        "GROCERY",
+        "DELEVERY"
+      ],
+      "announcementDay": "2023-02-20",
+      "EndDay": "2023-10-09",
       "startTime": "12:00",
       "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-13",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-13",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-13",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-13",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-13",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-13",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-13",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-13",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-13",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-13",
-      "startTime": "12:00",
-      "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-14",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-14",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-14",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-14",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-14",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-14",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-14",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-14",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-14",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-14",
-      "startTime": "12:00",
-      "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-15",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-15",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-15",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-15",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-15",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-15",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-15",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-15",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-15",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-15",
-      "startTime": "12:00",
-      "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-16",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-16",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-16",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-16",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-16",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-16",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-16",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-16",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-16",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-16",
-      "startTime": "12:00",
-      "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-17",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-17",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-17",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-17",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-17",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-17",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-17",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-17",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-17",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-17",
-      "startTime": "12:00",
-      "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-18",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-18",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-18",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-18",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-18",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-18",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-18",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-18",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-18",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-18",
-      "startTime": "12:00",
-      "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-19",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-19",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-19",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-19",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-19",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-19",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-19",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-19",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-19",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-19",
-      "startTime": "12:00",
-      "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-21",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-21",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-21",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-21",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-21",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-21",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-21",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-21",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-21",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-21",
-      "startTime": "12:00",
-      "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-22",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-22",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-22",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-22",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-22",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-22",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-22",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-22",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-22",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-22",
-      "startTime": "12:00",
-      "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-23",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-23",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-23",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-23",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-23",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-23",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-23",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-23",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-23",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-23",
-      "startTime": "12:00",
-      "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },   {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-24",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-24",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-24",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-24",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-24",
-        "startTime": "06:00",
-        "endTime": "12:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      },
-      {
-        "ad_id": "AD_001",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-24",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "marketKurly.png"
-      },
-      {
-        "ad_id": "AD_002",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-24",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "fomibox.png"
-      },
-      {
-        "ad_id": "AD_003",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-24",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "nike.png"
-      },
-      {
-        "ad_id": "AD_004",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-        "announcementDay": "2022-11-24",
-        "startTime": "12:00",
-        "endTime": "18:00",
-        "limit": 10,
-        "ad": "musinsa.png"
-      },
-      {
-        "ad_id": "AD_005",
-        "category": [
-          "GROCERY",
-          "DELEVERY"
-        ],
-      "announcementDay": "2022-11-24",
-      "startTime": "12:00",
-      "endTime": "18:00",
-        "limit": 10,
-        "ad": "bhc.png"
-      }
-      
-    ]
-  }
+      "limit": 10,
+      "ad": "marketKurly.png"
+    }
+  ]
+}
