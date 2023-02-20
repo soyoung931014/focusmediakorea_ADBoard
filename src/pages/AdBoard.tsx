@@ -29,7 +29,7 @@ const AdBoard = () => {
         }
       }
     },
-    status ? 30000 : null,
+    status ? 3000 : null,
   );
 
   const today = format(new Date(), 'yyyy-MM-dd');
