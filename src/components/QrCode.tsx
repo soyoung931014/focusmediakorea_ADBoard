@@ -24,7 +24,6 @@ const QrCode = ({ data, index }: QrCodeProps) => {
           </Link>
         </CodeWrapper>
       )}
-      ;
     </>
   );
 };
